@@ -1,0 +1,22 @@
+{
+  "name": "konferencja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babel.js",
+  "scripts": {
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-cli serve --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "@webpack-cli/init": "^1.1.3",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
