@@ -13,7 +13,7 @@ h1{
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 30px;
+    grid-gap: 40px;
     margin-top: 20px;
 }
 .save-box{
