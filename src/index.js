@@ -38,9 +38,9 @@ auth.onAuthStateChanged(user =>{
     }
  })
 
-zapis1.addEventListener('click', e => {
-    window.location= "https://zapisy1.netlify.app/";
-})
+// zapis1.addEventListener('click', e => {
+//     window.location= "https://zapisy1.netlify.app/";
+// })
 
 login.addEventListener("click", e =>{
     content.classList.add('d-none');
