@@ -6,6 +6,7 @@ const counter = document.querySelector(".personCounter");
 const logout = document.getElementById("logout");
 const logoutpart = document.querySelector(".sect-logout");
 dataButton = document.getElementById('data1');
+const error = document.querySelector('.error');
 let jason;
 let Jsonindex=0;
 let personCounter=0;
