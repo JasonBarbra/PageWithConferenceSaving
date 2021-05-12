@@ -1,4 +1,5 @@
 const zapis1 = document.getElementById("1");
+const zapis2 = document.getElementById("2");
 const  loginpart = document.querySelector(".mf-log");
 const login = document.querySelector(".log");
 const content = document.querySelector(".container");
@@ -38,9 +39,13 @@ auth.onAuthStateChanged(user =>{
     }
  })
 
-// zapis1.addEventListener('click', e => {
-//     window.location= "https://zapisy1.netlify.app/";
-// })
+zapis1.addEventListener('click', e => {
+    window.location= "https://zapisy2.netlify.app/";
+})
+
+zapis2.addEventListener('click', e => {
+    window.location= "https://zapisy1.netlify.app/";
+})
 
 login.addEventListener("click", e =>{
     content.classList.add('d-none');
