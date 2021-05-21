@@ -24,17 +24,8 @@ auth.onAuthStateChanged(user =>{
         loginpart.classList.add('d-none');
         logoutpart.classList.remove('d-none');
         counter.classList.remove('d-none');
-        db.collection('event3').orderBy('send_at','desc').get().then((snapshot) =>{
-            personCounter=snapshot.docs.length;
-            counter.querySelector('span').textContent = `${personCounter}`;
-            snapshot.docs.forEach(doc =>{
-                jason.push(doc.data());
-                const when = dateFns.format( jason[Jsonindex].send_at.toDate(), 'Do.MMMM.YYYY');
-                jason[Jsonindex].send_at = when;
-                Jsonindex+=1;
-            });
-         });
-         db.collection('event2').orderBy('send_at','desc').get().then((snapshot) =>{
+
+         db.collection('event4').orderBy('send_at','desc').get().then((snapshot) =>{
             personCounter2=snapshot.docs.length;
             span2.textContent = `${personCounter2}`;
             snapshot.docs.forEach(doc =>{
@@ -57,13 +48,8 @@ auth.onAuthStateChanged(user =>{
  })
 
 zapis1.addEventListener('click', e => {
-    window.location= "https://zapisy2.netlify.app/";
-})
-
-zapis2.addEventListener('click', e => {
     window.location= "https://zapisy1.netlify.app/";
 })
-
 login.addEventListener("click", e =>{
     content.classList.add('d-none');
     loginpart.classList.remove('d-none');
@@ -93,7 +79,7 @@ loginpart.addEventListener("submit", e=>{
  dataButton.addEventListener('click', e=>{
    const { Parser } = require('json2csv');
     const json2csvParser = new Parser();
-     const csv = json2csvParser.parse(jason);
+     const csv = json2csvParser.parse(jason2);
  
  let hiddenElement = document.createElement('a');
      hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
